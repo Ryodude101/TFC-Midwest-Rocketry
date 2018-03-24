@@ -14,10 +14,10 @@ struct IMU_data data;
 //loop that runs until launch
 void setup() {
 
-  while(!status.liftoff) {  //if liftoff = true, loop() starts
-  IMU_all_data(); //called to get all IMU data points to send to the TFR
+    while(!status.liftoff) {  //if liftoff = true, loop() starts
+        IMU_all_data(); //called to get all IMU data points to send to the TFR
 
-  }
+    }
 
 //launch has occured, do stuff here to prep for launch loop
 
@@ -41,26 +41,26 @@ void loop() {
 //                                       navigate to the desired point/control roll
 //                                       hold current position
 //                                       iterate to the next command
-  if( (Error <= Allowed_error)) //check if within the error bounds
-  {
-      if( T_sinceHold <= Hold_time) //hold if we have not yet held for one second
-          control_hold();
-      else //iterate to the next command and reset the timing variables
-      {
-          T_sinceControl = Control_period;
-          T_sinceHold = 0;
-          current_command++;
-      }
-  }
-  else
-  {
-      if (T_sinceControl >= Control_period) //actuate if its time for another PWM signal to be sent
-      {
-          T_sinceControl = T_sinceControl - Control_period;
-          control_actuate();
-          T_sinceHold = 0;
-      }
-  }
+    if( (Error <= Allowed_error)) //check if within the error bounds
+    {
+        if( T_sinceHold <= Hold_time) //hold if we have not yet held for one second
+            control_hold();
+        else //iterate to the next command and reset the timing variables
+        {
+            T_sinceControl = Control_period;
+            T_sinceHold = 0;
+            current_command++;
+        }
+    }
+    else
+    {
+        if (T_sinceControl >= Control_period) //actuate if its time for another PWM signal to be sent
+        {
+            T_sinceControl = T_sinceControl - Control_period;
+            control_actuate();
+            T_sinceHold = 0;
+        }
+    }
 
 }
 /*

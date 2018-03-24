@@ -4,14 +4,14 @@
 
 //used to keep track of all systems states, might not be needed
 struct status_set {
-  bool liftoff;
-  bool burnout;
-  bool apogee;
-  bool emergency;
-  bool IMU_connected;
-  bool TFR_connected;
-  bool TFC_1_connected;
-  bool TFC_2_connected;
+    bool liftoff;
+    bool burnout;
+    bool apogee;
+    bool emergency;
+    bool IMU_connected;
+    bool TFR_connected;
+    bool TFC_1_connected;
+    bool TFC_2_connected;
 };
 
 
