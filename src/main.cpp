@@ -24,14 +24,8 @@ void setup() {
 }
 
 
+
 void loop() {
-
-
-
-
-
-
-
 
 
 
@@ -63,6 +57,8 @@ void loop() {
     }
 
 }
+
+
 /*
 IMU_control_data(); //called to get data needed for control algorithm
 IMU_all_data(); //called to get all IMU data points to send to the TFR
