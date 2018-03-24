@@ -2,6 +2,18 @@
 #define _DEFINITIONS_H_
 
 
+
+float Error; //shoud probably be defined somewhere else
+
+
+
+
+
+
+
+
+
+
 //will be more useful when programming specific directions to point to
 enum cardinal_direction {
   north = 0,

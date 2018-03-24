@@ -1,6 +1,7 @@
-#include "control.h"
+#include "Control.h"
 
-void control() {
+void control_hold() {}
+void control_actuate() {}
   /*
   //Control Systems Section
 
@@ -26,7 +27,7 @@ void control() {
       e_Derivative = (error - last_error)/(sampleTime - lastTime)
       PWM_duty = Pgain_actuate*error + Dgain_actuate*e_derivative
   Else
-      e_Integral = 0.5*(error + last_error)*(sampleTime - last Time)
+      e_Integral += 0.5*(error + last_error)*(sampleTime - last Time)
       PWM_duty = Pgain_hold*error + Igain_hold*e_integral
 
   if PWM_duty > 0.05                    //this condition may need to change
@@ -48,4 +49,3 @@ void control() {
       Last time = sample time
       Last error = error
   */
-}
