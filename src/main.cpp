@@ -38,13 +38,6 @@ void loop() {
 check_status(); //check status struct and perform any needed actions
 */
 
-/*
-//functions that need to be called somewhere in the main loop
-IMU_control_data(); //called to get data needed for control algorithm
-IMU_all_data(); //called to get all IMU data points to send to the TFR
-check_status(); //check status struct and perform any needed actions
-*/
-
 
 //Perform the neccessary control functions:
 //                                       navigate to the desired point or control roll
