@@ -10,6 +10,12 @@ struct IMU_data {
     int IMU_roll;
     int IMU_pitch;
     int IMU_yaw;
+
+    //IMU calculations that will be used by the control function
+    int Error;
+    int last_Error;
+    int integral_Error;
+    int omega_Reading;
 };
 
 
